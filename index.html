@@ -11,61 +11,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
-  <style>
-
-  </style>
 </head>
 <body>
   <div class="smoke" aria-hidden="true"></div>
   <header>
-    <div class="brand">Pornography — tribute</div>
+    <div class="brand">The Cure Pornography Tribute</div>
     <nav>
       <a href="#about">Rólunk</a>
       <a href="#tracks">Tracks</a>
       <a href="#gallery">Galéria</a>
     </nav>
   </header>
-
   <main>
     <section class="hero">
       <div class="hero-inner">
         <div>
           <h1 class="title">Pornography</h1>
-          <p class="subtitle">Magyar The Cure tribute — sötét, melankolikus feldolgozások és élő fellépések. Ez a verzió erősebb vizuális hangsúllyal és nagy, figyelemfelkeltő borító-panellel készült.</p>
+          <p class="subtitle">Cure-t kedvelő csapat...Cure-t játszik....
+            <br>
+            <br>
+            Tagok: Kisduda Árpád (Arpi Cure) : ének, gitár, billentyűk</p>
           <p>
-            <a class="cta" href="#tracks">Hallgasd meg</a>
-            <a class="cta" href="#gallery" style="margin-left:12px">Nézd a fotókat</a>
+            <a class="cta" href="https://www.youtube.com/watch?v=xlXGbTigsJ4&list=RDxlXGbTigsJ4&start_radio=1" target="_blank">Hallgasd meg</a>
+            <a class="cta" href="https://www.facebook.com/HungarianTheCureTribute/photos?locale=hu_HU" style="margin-left:12px" target="_blank">Nézd a fotókat</a>
           </p>
 
           <div id="about" class="panel" style="margin-top:20px">
             <h3 style="margin:0 0 8px 0;font-family:var(--display)">Rólunk</h3>
-            <p style="margin:0;color:rgba(243,239,239,0.85)">Zenekarunk Pornography korszakát idézi — minimalista, borongós hangzás, analóg hangszerek és atmoszférikus színek. Következő fellépés: <strong>2025.09.05 — Budapest</strong>.</p>
+            <p style="margin:0;color:rgba(243,239,239,0.85)">A csapatot az alapìtó frontember Arpi Cure (Kisduda Árpád énekes gitáros, billentyűs programozó) hozta létre 2007 őszén..Inspiráció a Cure zenei és előadói munkásságának mély szeretete és élethű szìnpadra vitele.. A zenekar jelenlegi tóbbi tagja 2011 óta Harics Williams ( Hary Attila dobos) ..Másodgitárosi poszton 2023 óta Vince Dávid..( Smiley Thompson) tevékenykedik aki a promóciós feladatokban is részt vállal.Basszusgitár osunk pedig jelenleg Baranyai Márk,(Márkon Galupp) aki 2024 nyarán csatlakozott és a Graphy-n kìvül több zenekarban is tevékenykedik (pl.Cold Contrast.) A csapat 17 év alatt rengeteg klubot bejàrt, a Fekete Zaj fesztivál állandó zárózenekara 2009 óta..A cél és a lelkesedés az alakulás óta nem.változott. A Cure zenei és szìnpadi munkájának eljuttatása a lehető legtöbb helyre méltó tolmácsolásban.</p>
           </div>
 
         </div>
 
         <aside>
-          <div class="panel poster">Album Art / Poster (helykitöltő)</div>
-
-          <ul id="tracks" class="tracks" style="margin-top:14px;padding:0;list-style:none">
-            <li><span>1. Plainsong</span><span style="opacity:0.9">4:12</span></li>
-            <li><span>2. A Strange Day</span><span style="opacity:0.9">3:58</span></li>
-            <li><span>3. The Hanging Garden</span><span style="opacity:0.9">5:02</span></li>
-          </ul>
-
-          <!-- Ha szeretnéd beágyazhatunk SoundCloud vagy Bandcamp lejátszót ide. -->
+          <img src="./Images/arpi.jpg" alt="" width="440" style="border-radius: 20px;">
+          <h3 style="text-align: center;">Kisduda Árpád <br> a csapat alapító embere</h3>
         </aside>
       </div>
     </section>
 
-    <section id="gallery" style="max-width:1100px;margin:36px auto;padding:0 20px;">
-      <h2 style="font-family:var(--display);margin-top:0">Galéria</h2>
-      <div class="gallery">
-        <img alt="Koncert 1" src="https://via.placeholder.com/800x600?text=Koncert+1">
-        <img alt="Koncert 2" src="https://via.placeholder.com/800x600?text=Koncert+2">
-        <img alt="Stúdió" src="https://via.placeholder.com/800x600?text=St%C3%BAdi%C3%B3">
-      </div>
-    </section>
+<div class="gallery">
+  <img src="./Images/koncert 1.jpg" alt="Kép 1" onclick="openModal(this)">
+  <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)">
+  <img src="./Images/koncert 3.jpg" alt="Kép 3" onclick="openModal(this)">
+</div>
+
+
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
 
   </main>
 
@@ -74,7 +69,20 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
+function openModal(imgElement) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  modal.style.display = "block";
+  modalImg.src = imgElement.src.replace("_kicsi", "_nagy"); 
+}
+
+function closeModal() {
+  document.getElementById("modal").style.display = "none";
+}
   </script>
 </body>
 </html>

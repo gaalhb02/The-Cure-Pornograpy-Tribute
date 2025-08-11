@@ -171,11 +171,15 @@ img, picture, video, svg {
 @media (max-width: 900px) and (orientation: landscape) {
     .hero-inner aside {
       display: flex;
+      flex-direction: column;   
+      align-items: center;      
       justify-content: center; 
+      text-align: center;      
     }
   
     .hero-inner aside img {
       width: 440px; 
       height: auto;
+      display: block;
     }
   }

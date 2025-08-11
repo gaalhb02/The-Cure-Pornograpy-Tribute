@@ -168,3 +168,20 @@ img, picture, video, svg {
   aspect-ratio: 16/9;        
   object-fit: cover;
 }
+@media (max-width: 900px) and (orientation: landscape) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      text-align: center; 
+    }
+  
+    .hero-inner aside {
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+  
+    .hero-inner aside img {
+      max-width: 100%;
+      height: auto;
+    }
+  }

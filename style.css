@@ -136,26 +136,25 @@
     border: 3px solid rgba(183, 15, 17, 0.6);
     box-shadow: 0 0 40px rgba(183, 15, 17, 0.4);
   }
-  ::before,
-*::after { box-sizing: border-box; }
-html, body { overflow-x: hidden; }
+    ::before,
+    ::after { box-sizing: border-box; }
+    html, body { overflow-x: hidden; }
 
-/* 2. minden média (képek, video, svg) ne lépje túl a konténert */
+
 img, picture, video, svg {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* 3. a hero-aside képet felülírom, hogy ne legyen soha fix túl nagy */
+
 .hero-inner aside img {
-  width: 100%;       /* rugalmas */
-  max-width: 440px;  /* asztalon maradjon 440-ig */
+  width: 100%;       
+  max-width: 440px;  
   height: auto;
   border-radius: 20px;
 }
 
-/* 4. mobilon ne adjon felesleges margót a .main */
 @media (max-width:520px){
   .main{
     margin-left: 0 !important;
@@ -164,9 +163,8 @@ img, picture, video, svg {
   }
 }
 
-/* 5. galéria: ne legyen fix magasság, használj arányt*/
 .gallery img {
-  height: auto;              /* ne fix 180px */
-  aspect-ratio: 16/9;        /* modern böngészőkben szép arány */
+  height: auto;             
+  aspect-ratio: 16/9;        
   object-fit: cover;
 }

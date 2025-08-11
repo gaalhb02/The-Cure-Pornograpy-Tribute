@@ -57,8 +57,32 @@
   .tracks{margin-top:12px}
   .tracks li{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:8px;margin-bottom:8px;background:linear-gradient(90deg, rgba(255,255,255,0.01), transparent)}
 
-  .cta{display:inline-block;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(183,15,17,0.9);color:var(--txt);text-decoration:none;font-weight:600}
-  .cta:hover{background:rgba(183,15,17,0.12)}
+  .cta {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgba(183,15,17,0.9);
+    color: var(--txt);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .cta:hover {
+    background: rgba(183,15,17,0.12);
+  }
+  
+  @media (max-width: 600px) {
+    .cta {
+      display: block;       
+      width: 100%;          
+      max-width: 300px;     
+      margin: 10px auto;    
+      text-align: center;   
+      font-size: 1.2rem;    
+      padding: 12px 0;      
+    }
+  }
 
 
   footer{

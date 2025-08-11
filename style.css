@@ -73,6 +73,9 @@
   @media (max-width:520px){
     .gallery{grid-template-columns:1fr}
     .title{font-size:32px}
+    .main{
+        margin-left: 10px;
+    }
   }
   
 

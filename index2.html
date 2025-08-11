@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="author" content="Gaal Hunor">
+    <meta name="keywords" content="The Cure Pornography Tribute, Pornography Tribute">
+    <meta name="description" content="Ez a The Cure Pornography Tribute hivatalos oldala">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>The Cure Pornography Tribute</title>
+</head>
+<body>
+         
+      <main>
+        <br>
+        <div class="gallery">
+          <img src="./Images/koncert 1.jpg" alt="Kép 1" onclick="openModal(this)">
+          <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)">
+          <img src="./Images/koncert 3.jpg" alt="Kép 3" onclick="openModal(this)">
+        </div>
+      
+        <div id="modal" class="modal" onclick="closeModal()">
+          <span class="close" onclick="closeModal(event)">&times;</span>
+          <img class="modal-content" id="modal-img" />
+        </div>
+      </main>
+      <style>
+        .gallery {
+        display: flex;
+        gap: 100px;
+        max-width: 1200px;   
+        margin: 0 auto;      
+        justify-content: center;
+        }
+
+        .gallery img {
+        width: 500px;;
+        height: auto;
+        cursor: pointer;
+        }
+
+        
+        .gallery img:hover {
+          transform: scale(1.05);
+        }
+      
+        
+        @media (max-width: 700px) {
+        .gallery {
+        flex-wrap: wrap;  
+        justify-content: center;
+        gap: 50px;
+        }
+        .gallery img {
+        width: 100%; 
+        margin-bottom: 15px; 
+        }
+        body{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        }
+      
+      </style>
+      
+      <script>
+        function openModal(imgElement) {
+          const modal = document.getElementById("modal");
+          const modalImg = document.getElementById("modal-img");
+          modal.style.display = "flex";
+          modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
+        }
+      
+        function closeModal(event) {
+          if(event) event.stopPropagation();
+          document.getElementById("modal").style.display = "none";
+        }
+      </script>
+</body>
+</html>

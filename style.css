@@ -136,13 +136,37 @@
     border: 3px solid rgba(183, 15, 17, 0.6);
     box-shadow: 0 0 40px rgba(183, 15, 17, 0.4);
   }
-  /* extra margo -*/
-  @media (max-width:520px){
-    .gallery{grid-template-columns:1fr}
-    .title{font-size:32px}
-    .main{
-        margin-right: 0;
-        margin-left: 0;
-        padding: 0 10px; 
-    }
+  ::before,
+*::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+/* 2. minden média (képek, video, svg) ne lépje túl a konténert */
+img, picture, video, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 3. a hero-aside képet felülírom, hogy ne legyen soha fix túl nagy */
+.hero-inner aside img {
+  width: 100%;       /* rugalmas */
+  max-width: 440px;  /* asztalon maradjon 440-ig */
+  height: auto;
+  border-radius: 20px;
+}
+
+/* 4. mobilon ne adjon felesleges margót a .main */
+@media (max-width:520px){
+  .main{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 12px;
+  }
+}
+
+/* 5. galéria: ne legyen fix magasság, használj arányt*/
+.gallery img {
+  height: auto;              /* ne fix 180px */
+  aspect-ratio: 16/9;        /* modern böngészőkben szép arány */
+  object-fit: cover;
 }

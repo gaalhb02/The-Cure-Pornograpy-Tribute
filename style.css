@@ -102,13 +102,7 @@
   .gallery img:hover {
     transform: scale(1.05);
   }
-  @media (max-width: 600px) {
-    .gallery {
-      grid-template-columns: 1fr;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  }
+
 
 
   .modal {
@@ -142,3 +136,13 @@
     border: 3px solid rgba(183, 15, 17, 0.6);
     box-shadow: 0 0 40px rgba(183, 15, 17, 0.4);
   }
+  /* extra margo -*/
+  @media (max-width:520px){
+    .gallery{grid-template-columns:1fr}
+    .title{font-size:32px}
+    .main{
+        margin-right: 0;
+        margin-left: 0;
+        padding: 0 10px; 
+    }
+}

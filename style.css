@@ -74,8 +74,8 @@
     .gallery{grid-template-columns:1fr}
     .title{font-size:32px}
     .main{
-        margin-left: 100px;
-        margin-right: 75px;
+        margin-left: 200px;
+        margin-right: 200px;
     }
   }
   

@@ -263,6 +263,12 @@ svg {
     gap: 8px;
     align-items: start;
   }
+  .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 52%;
+    max-width: 90%;
+  }
 }
 
 .gallery img {
@@ -285,9 +291,3 @@ svg {
     display:block;
   }
 }
-.gallery img:nth-child(3n) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    width: 52%;
-    max-width: 90%;
-  }

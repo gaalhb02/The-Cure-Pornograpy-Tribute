@@ -250,4 +250,11 @@ svg {
   height:auto;
   border-radius:20px;
 }
+a {
+  outline: none;      
+}
 
+a:focus, a:active {
+  outline: none;      
+  background: none;   
+}

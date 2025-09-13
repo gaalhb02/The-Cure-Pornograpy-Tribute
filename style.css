@@ -205,15 +205,6 @@ footer {
   padding-top:60px;
 }
 
-.close {
-  position:absolute;
-  top:20px;
-  right:30px;
-  color:var(--red, crimson);
-  font-size:40px;
-  font-weight:bold;
-  cursor:pointer;
-}
 
 .modal-content {
   display:block;
@@ -224,7 +215,15 @@ footer {
   border:3px solid rgba(183, 15, 17, 0.6);
   box-shadow:0 0 40px rgba(183, 15, 17, 0.4);
 }
-
+.close {
+  position:absolute;
+  top:20px;
+  right:30px;
+  color:var(--red, crimson);
+  font-size:40px;
+  font-weight:bold;
+  cursor:pointer;
+}
 ::before,
 ::after {
   box-sizing:border-box;

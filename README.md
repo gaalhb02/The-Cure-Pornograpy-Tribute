@@ -1,1 +1,1 @@
-# The-Cure-Pornograpy-Tribute-Beta-
+# The-Cure-Pornograpy-Tribute

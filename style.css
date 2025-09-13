@@ -264,3 +264,6 @@ html, body {
   background-color: #111; 
   overflow-x: hidden;     
 }
+.lab{
+  padding: 1rem;
+}

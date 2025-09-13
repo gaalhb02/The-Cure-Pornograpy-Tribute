@@ -187,18 +187,17 @@ header {
   .nav-links.active {
     display: flex;
   }
-  .nav-links a {
-    -webkit-tap-highlight-color: transparent; 
-    outline: none;                           
-    background: none;                          
+  .hamburger {
+  -webkit-tap-highlight-color: transparent; /* iOS / Android */
+  outline: none;                             /* desktop fókusz */
+  user-select: none;                         /* véletlen kijelölés elkerülése */
   }
-
-  .nav-links a:focus,
-  .nav-links a:active {
-    outline: none;
-    background: none;
+  .hamburger:focus,
+  .hamburger:active {
+  outline: none;
+  background: none;
   }
-}
+  }
 
   </style>
 </body>

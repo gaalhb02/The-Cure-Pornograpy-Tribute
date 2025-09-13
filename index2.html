@@ -84,51 +84,53 @@
       </main>
       <style>
         .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Képek közötti távolság */
-  max-width: 1200px;
-  margin: 0 auto;
-}
+        display: flex;
+        gap: 100px;
+        max-width: 1200px;   
+        margin: 0 auto;      
+        justify-content: center;
+        }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  max-width: 500px; /* Maximum szélesség nagy képernyőn */
-  cursor: pointer;
-  transition: transform 0.3s;
-}
+        .gallery img {
+        width: 500px;;
+        height: auto;
+        cursor: pointer;
+        }
 
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* 900px alatti képernyők: 2 kép egymás mellett */
-@media (max-width: 900px) {
-  .gallery img {
-    width: calc(50% - 10px); /* 2 kép szélessége, gap figyelembevételével */
-  }
-}
-
-/* 700px alatti képernyők: 1 kép soronként */
-@media (max-width: 700px) {
-  .gallery img {
-    width: 100%;
-  }
-
-  body {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-/* 700px alatt fekvő (landscape) módban: 2 kép soronként */
-@media (max-width: 700px) and (orientation: landscape) {
-  .gallery img {
-    width: calc(50% - 10px);
-  }
-}
+        
+        .gallery img:hover {
+          transform: scale(1.05);
+        }
+      
+        
+        @media (max-width: 700px) {
+        .gallery {
+        flex-wrap: wrap;  
+        justify-content: center;
+        gap: 50px;
+        }
+        .gallery img {
+        width: 100%; 
+        margin-bottom: 15px; 
+        }
+        body{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        } 
+        @media (max-width: 700px) and (orientation: landscape) {
+        .gallery {
+        flex-wrap: wrap;  
+        justify-content: center;
+        gap: 20px;
+        }
+        .gallery img {
+        width: calc(50% - 20px);
+        margin-bottom: 15px;
+        }
+      }
+      @media (max-width: 900px)
+        
       </style>
       
       <script>

@@ -269,19 +269,29 @@ html, body {
   padding: 1rem;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  min-height: 100%;
   background: radial-gradient(1200px 600px at 10% 20%, rgba(183, 15, 18, 0.048), transparent 8%),
               radial-gradient(900px 400px at 90% 80%, rgba(123,16,16,0.04), transparent 6%),
               linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color: var(--txt);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
-  position: relative; 
 }
+
+body {
+  position: relative;
+}
+
+.main {
+  padding-bottom: 5rem; 
+}
+
 .smoke {
-  position: absolute; 
-  top: 0; left: 0; right: 0; bottom: 0;
+  position: fixed;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
   mix-blend-mode: screen;

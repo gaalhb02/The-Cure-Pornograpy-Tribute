@@ -84,12 +84,44 @@
       if(event) event.stopPropagation();
       document.getElementById("modal").style.display = "none";
     }
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    });
+
+
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-links')
+
+hamburger.addEventListener('click', () => {
+  if (navLinks.classList.contains('active')) {
+    navLinks.style.overflow = "hidden"
+    const height = navLinks.scrollHeight
+    navLinks.style.height = height + "px"
+    requestAnimationFrame(() => {
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
+      navLinks.style.height = "0px"
+    })
+    navLinks.addEventListener('transitionend', function handler() {
+      navLinks.classList.remove('active')
+      navLinks.style.transition = ""
+      navLinks.style.height = ""
+      navLinks.style.overflow = ""
+      navLinks.removeEventListener('transitionend', handler)
+    })
+  } else {
+    navLinks.classList.add('active')
+    navLinks.style.overflow = "hidden"
+    navLinks.style.height = "0px"
+    requestAnimationFrame(() => {
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
+      navLinks.style.height = navLinks.scrollHeight + "px"
+    })
+    navLinks.addEventListener('transitionend', function handler() {
+      navLinks.style.transition = ""
+      navLinks.style.height = ""
+      navLinks.style.overflow = ""
+      navLinks.removeEventListener('transitionend', handler)
+    })
+  }
+})
   </script>
   <style>
 @media (max-width:520px) {
@@ -182,6 +214,7 @@ header {
 
   .nav-links.active {
     display: flex;
+    margin-right: 1.1rem;
   }
   .hamburger {
     -webkit-tap-highlight-color: transparent;

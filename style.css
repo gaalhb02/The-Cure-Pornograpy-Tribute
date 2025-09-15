@@ -268,3 +268,10 @@ html, body {
 .lab{
   padding: 1rem;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #111; 
+  overflow-x: hidden;     
+}

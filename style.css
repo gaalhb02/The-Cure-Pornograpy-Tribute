@@ -268,10 +268,6 @@ html, body {
 .lab{
   padding: 1rem;
 }
-body{
-    background: transparent; 
-    min-height: 100vh;      
-  }
 
 html, body {
   margin: 0;

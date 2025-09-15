@@ -269,9 +269,14 @@ html, body {
   padding: 1rem;
 }
 html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-color: #111; 
-  overflow-x: hidden;     
-}
+    min-height: 100%;
+    margin: 0;
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(183, 15, 18, 0.048), transparent 8%),
+                radial-gradient(900px 400px at 90% 80%, rgba(123,16,16,0.04), transparent 6%),
+                linear-gradient(90deg,var(--bg-1) 0%, var(--bg-2) 100%);
+  }
+
+  body {
+    background: transparent; 
+    min-height: 100vh;      
+  }

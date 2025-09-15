@@ -283,10 +283,9 @@ html, body {
 
 body {
   position: relative;
-}
-
+ }
 .main {
-  padding-bottom: 5rem; 
+  padding-bottom: 5rem;  
 }
 
 .smoke {

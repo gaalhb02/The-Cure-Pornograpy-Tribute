@@ -35,7 +35,7 @@
             <p>Tagok: Kisduda Árpád (Arpi Cure) : ének, gitár, billentyűk</p>
             <a class="cta" href="https://www.youtube.com/watch?v=xlXGbTigsJ4&list=RDxlXGbTigsJ4&start_radio=1" target="_blank">Hallgasd meg</a>
             <a class="cta" href="./index2.html" style="margin-left:12px">Nézd a fotókat</a>
-          <a href="./index3.html" style="text-decoration: none; color: white;">
+            <a href="./index3.html" style="text-decoration: none; color: white;">
             <div id="about" class="panel" style="margin-top:20px">
               <h3 style="margin:0 0 8px 0;font-family:var(--display)">Rólunk (kattinits ide)</h3>
               <p style="margin:0;color:rgba(243,239,239,0.85)">A Pornography (Hungarian The Cure Tribute) zenekar 2001-ben alakult Gyöngyösön azzal a céllal, hogy a közönség és a tagok örömére elhozza a The Cure zenekar hangulatvilágát.
@@ -46,11 +46,10 @@
           </a>
 
         </div>
-
-        <aside>
+        <div style="display: flex; flex-direction: column; align-items: center;">
           <img src="./Images/arpi.jpg" alt="" width="440" style="border-radius: 20px;">
           <h3 style="text-align: center;">Kisduda Árpád <br> a csapat alapító embere</h3>
-        </aside>
+        </div>
       </div>
     </section>
 
@@ -74,23 +73,23 @@
 
   <script>
 
-function openModal(imgElement) {
-          const modal = document.getElementById("modal");
-          const modalImg = document.getElementById("modal-img");
-          modal.style.display = "flex";
-          modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
-        }
+    function openModal(imgElement) {
+      const modal = document.getElementById("modal");
+      const modalImg = document.getElementById("modal-img");
+      modal.style.display = "flex";
+      modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
+    }
       
-        function closeModal(event) {
-          if(event) event.stopPropagation();
-          document.getElementById("modal").style.display = "none";
-        }
-        const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+    function closeModal(event) {
+      if(event) event.stopPropagation();
+      document.getElementById("modal").style.display = "none";
+    }
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+    hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    });
   </script>
   <style>
     @media (max-width:520px) {

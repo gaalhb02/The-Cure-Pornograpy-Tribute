@@ -27,6 +27,7 @@ body {
              linear-gradient(90deg,var(--bg-1) 0%, var(--bg-2) 100%);
   overflow-x:hidden;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-repeat: repeat;
 }
 
 .smoke {

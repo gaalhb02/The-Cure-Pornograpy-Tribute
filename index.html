@@ -122,6 +122,24 @@ hamburger.addEventListener('click', () => {
     })
   }
 })
+let ticking = false;
+
+function forceRepaint() {
+  document.body.style.transform = 'translateZ(0)';
+  requestAnimationFrame(() => {
+    document.body.style.transform = '';
+  });
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      forceRepaint();
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
   </script>
   <style>
 @media (max-width:520px) {

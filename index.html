@@ -92,16 +92,16 @@
     });
   </script>
   <style>
-    @media (max-width:520px) {
+@media (max-width:520px) {
   .main {
     margin-left:0 !important;
     margin-right:0 !important;
-    padding:0 12px;
+    padding:0 0.75rem;
   }
   .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
+    gap: 0.5rem;
     align-items: start;
   }
   .gallery img:nth-child(3n) {
@@ -111,11 +111,12 @@
     max-width: 90%;
   }
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 1rem 2rem;
   background-color: #11111100;
   color: white;
 }
@@ -124,34 +125,33 @@ header {
   font-size: 1.8rem;
 }
 
-
 .hamburger {
   display: none;
   cursor: pointer;
   font-size: 2rem;
 }
+
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 1.25rem;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 0.25rem 0.5rem;
 }
 
 .nav-links a:hover {
   background-color: #33333300;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
-
-@media (max-width: 520px) {
+@media (max-width:520px) {
   header {
     flex-direction: column;
     align-items: center;
-    padding: 12px 0;
+    padding: 0.75rem 0;
   }
 
   .brand {
@@ -161,22 +161,22 @@ header {
   }
 
   .hamburger {
-    display: block; 
+    display: block;
     width: 100%;
     text-align: center;
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
   .nav-links {
-    display: none; 
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
     background-color: #11111100;
-    margin-top: 8px;
+    margin-top: 0.5rem;
   }
 
   .nav-links a {
-    padding: 12px 0;
+    padding: 0.75rem 0;
     border-top: 1px solid #333333;
   }
 
@@ -184,17 +184,16 @@ header {
     display: flex;
   }
   .hamburger {
-  -webkit-tap-highlight-color: transparent; 
-  outline: none;                             
-  user-select: none;                         
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
   }
   .hamburger:focus,
   .hamburger:active {
-  outline: none;
-  background: none;
+    outline: none;
+    background: none;
   }
-  }
-
+}
   </style>
 </body>
 </html>

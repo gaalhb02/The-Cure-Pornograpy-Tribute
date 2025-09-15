@@ -275,25 +275,35 @@ html, body {
   min-height: 100%;
   background: radial-gradient(1200px 600px at 10% 20%, rgba(183, 15, 18, 0.048), transparent 8%),
               radial-gradient(900px 400px at 90% 80%, rgba(123,16,16,0.04), transparent 6%),
-              linear-gradient(90deg, var(--bg-1) 0%, var(--bg-2) 100%);
-  color: var(--txt);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              linear-gradient(90deg, #040304 0%, #120000 100%);
   overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
   position: relative;
- }
+  background: inherit;
+}
+
 .main {
-  padding-bottom: 5rem;  
+  padding-bottom: 10rem;
 }
 
 .smoke {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
   mix-blend-mode: screen;
   background-image: radial-gradient(closest-side, rgba(183, 15, 18, 0.021), transparent 40%);
   animation: drift 18s linear infinite;
+}
+
+@keyframes drift {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
 }

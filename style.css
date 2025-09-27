@@ -222,19 +222,16 @@ nav a:hover {
 }
 .gallery {
     display: grid;
-      grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-          align-items: start;
-          }
-          .gallery img:nth-child(3n) {
-            grid-column: 1 / -1;
-              justify-self: center;
-                width: 52%;
-                  max-width: 90%;
-                  }
-
-
-
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+    }
+    .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 52%;
+    max-width: 90%;
+    }
 @media (max-width:520px) {
   .gallery { grid-template-columns: 1fr; }
   .title { font-size: 2rem; }

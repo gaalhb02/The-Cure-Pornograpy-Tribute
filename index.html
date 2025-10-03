@@ -54,8 +54,8 @@
     </section>
 
 <div class="gallery">
-  <img src="./Images/koncert 1.jpg" alt="Kép 1" onclick="openModal(this)">
-  <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)">
+  <img src="./Images/koncert 1.jpg" alt="Kép 1" onclick="openModal(this)" class="kep">
+  <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)" class="kep">
   <img src="./Images/koncert 3.jpg" alt="Kép 3" onclick="openModal(this)">
 </div>
 
@@ -185,13 +185,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 0.75rem 0;
-  }
-
-  .brand {
-    width: 100%;
-    text-align: center;
-    font-size: 1.8rem;
-  }
+    }
 
   .hamburger {
     display: block;
@@ -228,6 +222,29 @@ header {
     background: none;
   }
 }
+@media (max-width:980px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+    width: 90%;
+    }
+    .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 49%;
+    max-width: 90%;
+    }
+
+  .brand {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
+
   </style>
 </body>
 </html>

@@ -1,19 +1,22 @@
 <!doctype html>
 <html lang="hu">
-  <meta charset="utf-8">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="Gaal Hunor" name="author">
-  <meta content="The Cure Pornography Tribute, Pornography Tribute" name="keywords">
-  <meta content="Ez a The Cure Pornography Tribute hivatalos oldala" name="description">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Gaal Hunor">
+  <meta name="keywords" content="The Cure Pornography Tribute, Pornography Tribute">
+  <meta name="description" content="Ez a The Cure Pornography Tribute hivatalos oldala">
   <title>The Cure Pornography Tribute</title>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <link href="./style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
   <div class="smoke" aria-hidden="true"></div>
   <header>
     <div class="brand">The Cure Pornography Tribute</div>
-    <div class="hamburger">☰</div>
+    <div class="hamburger">&#9776;</div>
     <nav class="nav-links">
       <a href="./index3.html">Rólunk</a>
       <a href="./index4.html">Események</a>
@@ -26,131 +29,222 @@
       <div class="hero-inner">
         <div>
           <h1 class="title">Pornography</h1>
-          <p class="subtitle">Cure-t kedvelő csapat...Cure-t játszik....</p>
-          <a href="https://www.youtube.com/watch?v=xlXGbTigsJ4&list=RDxlXGbTigsJ4&start_radio=1" class="cta" target="_blank">Hallgasd meg</a>
-          <a href="./index2.html" class="cta" style="margin-left:12px">Nézd a fotókat</a>
-          <a href="./index3.html" style="text-decoration:none;color:#fff">
-            <div class="panel" id="about" style="margin-top:20px">
+          <p class="subtitle">Cure-t kedvelő csapat...Cure-t játszik....
+            <br>
+            <br>
+            <br>
+            <a class="cta" href="https://www.youtube.com/watch?v=xlXGbTigsJ4&list=RDxlXGbTigsJ4&start_radio=1" target="_blank">Hallgasd meg</a>
+            <a class="cta" href="./index2.html" style="margin-left:12px">Nézd a fotókat</a>
+            <a href="./index3.html" style="text-decoration: none; color: white;">
+            <div id="about" class="panel" style="margin-top:20px">
               <h3 style="margin:0 0 8px 0;font-family:var(--display)">Rólunk (kattinits ide)</h3>
-              <p style="margin:0;color:rgba(243,239,239,.85)">A Pornography (Hungarian The Cure Tribute) zenekar 2001-ben alakult Gyöngyösön azzal a céllal, hogy a közönség és a tagok örömére elhozza a The Cure zenekar hangulatvilágát.
+              <p style="margin:0;color:rgba(243,239,239,0.85)">A Pornography (Hungarian The Cure Tribute) zenekar 2001-ben alakult Gyöngyösön azzal a céllal, hogy a közönség és a tagok örömére elhozza a The Cure zenekar hangulatvilágát.
                 Az indie, dark, new wave és post punk zenei irányzatok ősatyja előtti tisztelgésük nem csak a Cure, hanem ezen stílusok rajongóinak is kedvére tesz.
                 Míg az "anyazenekar" ritka vendége hazánknak addig a Pornography az elmúlt 11 év alatt számtalan klubban és fesztiválon megfordult s most is aktív szereplője ennek a (talán nem is annyira) undergroud szcénának.
                 Mint a legtöbb zenekarban tagcserék itt is voltak..2001-2004-ig egy más felállásban működött az együttes s 3 év szünet után 2007-ben újjáéledve a mai napig - s remélhetőleg még sokáig - hűen reprezentálják a boglyafrizurások életérzését.</p>
             </div>
           </a>
+
         </div>
-        <div style="display:flex;flex-direction:column;align-items:center">
-          <img alt="" src="./Images/arpi.jpg" style="border-radius:20px" width="440" loading="lazy">
-          <h3 style="text-align:center">Kisduda Árpád<br>a csapat alapító embere</h3>
+        <div style="display: flex; flex-direction: column; align-items: center;">
+          <img src="./Images/arpi.jpg" alt="" width="440" style="border-radius: 20px;" loading="lazy">
+          <h3 style="text-align: center;">Kisduda Árpád <br> a csapat alapító embere</h3>
         </div>
       </div>
     </section>
-    <div class="gallery">
-      <img alt="Kép 1" src="./Images/koncert 1.jpg" onclick="openModal(this)" class="kep">
-      <img alt="Kép 2" src="./Images/koncert 2.jpg" onclick="openModal(this)" class="kep">
-      <img alt="Kép 3" src="./Images/koncert 3.jpg" onclick="openModal(this)">
-    </div>
-    <div class="modal" id="modal">
-      <span class="close" onclick="closeModal()">×</span>
-      <img class="modal-content" id="modal-img">
-    </div>
+
+<div class="gallery">
+  <img src="./Images/koncert 1.jpg" alt="Kép 1" onclick="openModal(this)">
+  <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)">
+  <img src="./Images/koncert 3.jpg" alt="Kép 3" onclick="openModal(this)">
+</div>
+
+
+<div id="modal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
   </main>
-  <div class="lab" style="text-align:center">© Pornography — tribute · Kapcsolat: info@example.com</div>
+
+  <div style="text-align: center;" class="lab">
+        © Pornography — tribute · Kapcsolat: info@example.com
+  </div>
+
   <script>
+
     function openModal(imgElement) {
       const modal = document.getElementById("modal");
       const modalImg = document.getElementById("modal-img");
       modal.style.display = "flex";
       modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
     }
-
+      
     function closeModal(event) {
       if(event) event.stopPropagation();
       document.getElementById("modal").style.display = "none";
     }
 
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
 
-    hamburger.addEventListener('click', () => {
-      if (navLinks.classList.contains('active')) {
-        navLinks.style.overflow = "hidden";
-        const height = navLinks.scrollHeight;
-        navLinks.style.height = height + "px";
-        requestAnimationFrame(() => {
-          navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
-          navLinks.style.height = "0px";
-        });
-        navLinks.addEventListener('transitionend', function handler() {
-          navLinks.classList.remove('active');
-          navLinks.style.transition = "";
-          navLinks.style.height = "";
-          navLinks.style.overflow = "";
-          navLinks.removeEventListener('transitionend', handler);
-        });
-      } else {
-        navLinks.classList.add('active');
-        navLinks.style.overflow = "hidden";
-        navLinks.style.height = "0px";
-        requestAnimationFrame(() => {
-          navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
-          navLinks.style.height = navLinks.scrollHeight + "px";
-        });
-        navLinks.addEventListener('transitionend', function handler() {
-          navLinks.style.transition = "";
-          navLinks.style.height = "";
-          navLinks.style.overflow = "";
-          navLinks.removeEventListener('transitionend', handler);
-        });
-      }
-    });
+
+const hamburger = document.querySelector('.hamburger')
+const navLinks = document.querySelector('.nav-links')
+
+hamburger.addEventListener('click', () => {
+  if (navLinks.classList.contains('active')) {
+    navLinks.style.overflow = "hidden"
+    const height = navLinks.scrollHeight
+    navLinks.style.height = height + "px"
+    requestAnimationFrame(() => {
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
+      navLinks.style.height = "0px"
+    })
+    navLinks.addEventListener('transitionend', function handler() {
+      navLinks.classList.remove('active')
+      navLinks.style.transition = ""
+      navLinks.style.height = ""
+      navLinks.style.overflow = ""
+      navLinks.removeEventListener('transitionend', handler)
+    })
+  } else {
+    navLinks.classList.add('active')
+    navLinks.style.overflow = "hidden"
+    navLinks.style.height = "0px"
+    requestAnimationFrame(() => {
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
+      navLinks.style.height = navLinks.scrollHeight + "px"
+    })
+    navLinks.addEventListener('transitionend', function handler() {
+      navLinks.style.transition = ""
+      navLinks.style.height = ""
+      navLinks.style.overflow = ""
+      navLinks.removeEventListener('transitionend', handler)
+    })
+  }
+})
+
   </script>
   <style>
-    @media (max-width:520px) {
-      .main { margin-left:0!important; margin-right:0!important; padding:0 .75rem; }
-      .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:.5rem; align-items:start; }
-      .gallery img:nth-child(3n) { grid-column:1/-1; justify-self:center; width:52%; max-width:90%; }
+@media (max-width:520px) {
+  .main {
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding:0 0.75rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+  }
+  .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 52%;
+    max-width: 90%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #11111100;
+  color: white;
+}
+
+.brand {
+  font-size: 1.8rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+  background-color: #33333300;
+  border-radius: 0.25rem;
+}
+
+@media (max-width:520px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 0;
     }
 
-    header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:1rem 2rem;
-      background-color:#11111100;
-      color:#fff;
+  .hamburger {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #11111100;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 0;
+    border-top: 1px solid #333333;
+  }
+
+  .nav-links.active {
+    display: flex;
+    margin-right: 1.1rem;
+  }
+  .hamburger {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+  }
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none;
+    background: none;
+  }
+}
+@media (max-width:980px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+    width: 90%;
+    }
+    .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 49%;
+    max-width: 90%;
     }
 
-    .brand { font-size:1.8rem; }
-    .hamburger { display:none; cursor:pointer; font-size:2rem; }
-    .nav-links {
-      display:flex;
-      gap:1.25rem;
-    }
-    .nav-links a {
-      color:#fff;
-      text-decoration:none;
-      padding:.25rem .5rem;
-    }
-    .nav-links a:hover {
-      background-color:#33333300;
-      border-radius:.25rem;
-    }
+  .brand {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
 
-    @media (max-width:520px) {
-      header { flex-direction:column; align-items:center; padding:.75rem 0; }
-      .hamburger { display:block; width:100%; text-align:center; margin-top:.5rem; }
-      .nav-links { display:none; flex-direction:column; width:100%; text-align:center; background-color:#11111100; margin-top:.5rem; }
-      .nav-links a { padding:.75rem 0; border-top:1px solid #333; }
-      .nav-links.active { display:flex; margin-right:1.1rem; }
-      .hamburger {-webkit-tap-highlight-color:transparent; outline:0; user-select:none; }
-      .hamburger:active, .hamburger:focus { outline:0; background:0 0; }
-    }
 
-    @media (max-width:980px) {
-      .gallery { display:grid; grid-template-columns:repeat(2,1fr); gap:.5rem; align-items:start; width:90%; }
-      .gallery img:nth-child(3n) { grid-column:1/-1; justify-self:center; width:49%; max-width:90%; }
-      .brand { width:100%; text-align:center; font-size:1.8rem; }
-    }
   </style>
+</body>
 </html>

@@ -122,9 +122,21 @@ hamburger.addEventListener('click', () => {
     })
   }
 })
-
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  window.scrollTo(0, 0);
+  window.addEventListener('load', () => {
+    window.scrollTo(0, 0);
+  });
   </script>
   <style>
+    gallery img {
+          image-rendering: auto;
+          transform: translateZ(0); 
+          backface-visibility: hidden; 
+          will-change: transform; 
+        }
 @media (max-width:520px) {
   .main {
     margin-left:0 !important;

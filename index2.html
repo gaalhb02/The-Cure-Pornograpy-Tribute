@@ -25,42 +25,41 @@
             <img src="./Images/koncert 2.jpg" alt="Kép 2" onclick="openModal(this)">
             <img src="./Images/koncert 3.jpg" alt="Kép 3" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
           
           <div class="gallery">
             <img src="./Images/koncert 4.jpg" alt="Kép 4" onclick="openModal(this)">
             <img src="./Images/koncert 5.jpg" alt="Kép 5" onclick="openModal(this)">
             <img src="./Images/koncert 6.jpg" alt="Kép 6" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
+
           
           <div class="gallery">
             <img src="./Images/koncert 7.jpg" alt="Kép 7" onclick="openModal(this)">
             <img src="./Images/koncert 8.jpg" alt="Kép 8" onclick="openModal(this)">
             <img src="./Images/koncert 9.jpg" alt="Kép 9" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
+
           
           <div class="gallery">
             <img src="./Images/koncert 10.jpg" alt="Kép 10" onclick="openModal(this)">
             <img src="./Images/koncert 11.jpg" alt="Kép 11" onclick="openModal(this)">
             <img src="./Images/koncert 12.jpg" alt="Kép 12" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
+
           
           <div class="gallery">
             <img src="./Images/koncert 13.jpg" alt="Kép 13" onclick="openModal(this)">
             <img src="./Images/koncert 14.jpg" alt="Kép 14" onclick="openModal(this)">
             <img src="./Images/koncert 15.jpg" alt="Kép 15" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
+
           
           <div class="gallery">
             <img src="./Images/koncert 16.jpg" alt="Kép 16" onclick="openModal(this)">
             <img src="./Images/koncert 17.jpg" alt="Kép 17" onclick="openModal(this)">
             <img src="./Images/koncert 18.jpg" alt="Kép 18" onclick="openModal(this)">
           </div>
-          <br><br><br><br>
+
           
           <div class="gallery">
             <img src="./Images/koncert 19.jpg" alt="Kép 19" onclick="openModal(this)">
@@ -72,7 +71,7 @@
           <span class="close" onclick="closeModal(event)">&times;</span>
           <img class="modal-content" id="modal-img" />
         </div>
-        <br>
+        
         <div style="text-align: center;">
             <a class="cta" href="./index.html" style="margin-left:12px">Vissza</a>
         </div>
@@ -84,19 +83,22 @@
       <style>
         .gallery {
         display: flex;
-        gap: 100px;
+        gap: 65px;
         max-width: 1200px;   
-        margin: 0 auto;      
+        margin: 0 auto; 
+        margin-bottom: 65px;     
         justify-content: center;
         }
 
         .gallery img {
-        width: 31.25rem;
-        height: auto;
-        cursor: pointer;
+          width: 32.25rem;
+          height: auto;
+          cursor: pointer;
+          image-rendering: auto;
+          transform: translateZ(0); 
+          backface-visibility: hidden; 
+          will-change: transform; 
         }
-
-        
         .gallery img:hover {
           transform: scale(1.05);
         }
@@ -106,7 +108,7 @@
         .gallery {
         flex-wrap: wrap;  
         justify-content: center;
-        gap: 50px;
+        gap: 65px;
         }
         .gallery img {
         width: 100%; 
@@ -117,7 +119,8 @@
         .gallery {
         flex-wrap: wrap;  
         justify-content: center;
-        gap: 20px;
+        gap: 35px;
+        margin-bottom: 35px;
         }
         .gallery img {
         width: calc(50% - 20px);
@@ -128,7 +131,7 @@
         .gallery {
         flex-wrap: wrap;  
         justify-content: center;
-        gap: 50px;
+        gap: 65px;
         margin-left: 1.7rem;
         margin-right: 1.7rem;
         }

@@ -9,6 +9,8 @@ function closeModal(event) {
   if (event) event.stopPropagation();
   document.getElementById("modal").style.display = "none";
 }
+
+
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -40,6 +42,7 @@ hamburger.addEventListener('click', () => {
     });
   }
 });
+
 
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';

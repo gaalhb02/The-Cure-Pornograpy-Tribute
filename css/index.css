@@ -1,0 +1,125 @@
+.gallery img {
+          image-rendering: auto;
+          transform: translateZ(0); 
+          backface-visibility: hidden; 
+          will-change: transform; 
+        }
+@media (max-width:520px) {
+  .main {
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding:0 0.75rem;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+  }
+  .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 52%;
+    max-width: 90%;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #11111100;
+  color: white;
+}
+
+.brand {
+  font-size: 1.8rem;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-links a:hover {
+  background-color: #33333300;
+  border-radius: 0.25rem;
+}
+
+@media (max-width:520px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.75rem 0;
+    }
+
+  .hamburger {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #11111100;
+    margin-top: 0.5rem;
+  }
+
+  .nav-links a {
+    padding: 0.75rem 0;
+    border-top: 1px solid #333333;
+  }
+
+  .nav-links.active {
+    display: flex;
+    margin-right: 1.1rem;
+  }
+  .hamburger {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+  }
+  .hamburger:focus,
+  .hamburger:active {
+    outline: none;
+    background: none;
+  }
+}
+@media (max-width:980px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    align-items: start;
+    width: 90%;
+    }
+    .gallery img:nth-child(3n) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 49%;
+    max-width: 90%;
+    }
+
+  .brand {
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+

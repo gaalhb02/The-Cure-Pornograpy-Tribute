@@ -10,7 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+  <link rel="preload" href="css/index3.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="css/index3.css"></noscript>
 </head>
 <body>
     <header style="display: block;">
@@ -139,17 +142,5 @@
     <div style="text-align: center;" class="lab">
         © Pornography — tribute · Kapcsolat: info@example.com
     </div>
-    <style>
-        p{
-            margin-left: 4rem;
-            margin-right: 4rem;
-            font-size: 1.0rem;
-        }
-        @media (max-width: 900px) {
-        p {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        }
-        }
-    </style>
+
 </body>

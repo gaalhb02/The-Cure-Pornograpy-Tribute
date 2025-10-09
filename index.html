@@ -84,55 +84,59 @@ function closeModal(event) {
   document.getElementById("modal").style.display = "none";
 }
 
+/* --- 🔻 Optimalizált, de ugyanúgy működő hamburgermenü --- */
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-  if (navLinks.classList.contains('active')) {
-    navLinks.style.overflow = "hidden";
-    const height = navLinks.scrollHeight;
-    navLinks.style.height = height + "px";
+  const isActive = navLinks.classList.contains('active');
 
-    navLinks.style.willChange = "height";
-    navLinks.style.transform = "translateZ(0)";
+  // GPU és kompozitor gyorsítás előkészítése
+  navLinks.style.willChange = 'height';
+  navLinks.style.transform = 'translateZ(0)';
+  navLinks.style.backfaceVisibility = 'hidden';
+  navLinks.style.overflow = 'hidden';
+
+  if (isActive) {
+    const height = navLinks.scrollHeight;
+    navLinks.style.height = height + 'px';
 
     requestAnimationFrame(() => {
-      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
-      navLinks.style.height = "0px";
+      navLinks.style.transition = 'height 0.45s cubic-bezier(0.22, 0.61, 0.36, 1)';
+      navLinks.style.height = '0px';
     });
 
     navLinks.addEventListener('transitionend', function handler() {
       navLinks.classList.remove('active');
-      navLinks.style.transition = "";
-      navLinks.style.height = "";
-      navLinks.style.overflow = "";
-      navLinks.style.willChange = "";
-      navLinks.style.transform = "";
+      navLinks.style.transition = '';
+      navLinks.style.height = '';
+      navLinks.style.overflow = '';
+      navLinks.style.willChange = '';
+      navLinks.style.transform = '';
+      navLinks.style.backfaceVisibility = '';
       navLinks.removeEventListener('transitionend', handler);
     });
   } else {
     navLinks.classList.add('active');
-    navLinks.style.overflow = "hidden";
-    navLinks.style.height = "0px";
-
-    navLinks.style.willChange = "height";
-    navLinks.style.transform = "translateZ(0)";
+    navLinks.style.height = '0px';
 
     requestAnimationFrame(() => {
-      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
-      navLinks.style.height = navLinks.scrollHeight + "px";
+      navLinks.style.transition = 'height 0.45s cubic-bezier(0.22, 0.61, 0.36, 1)';
+      navLinks.style.height = navLinks.scrollHeight + 'px';
     });
 
     navLinks.addEventListener('transitionend', function handler() {
-      navLinks.style.transition = "";
-      navLinks.style.height = "";
-      navLinks.style.overflow = "";
-      navLinks.style.willChange = "";
-      navLinks.style.transform = "";
+      navLinks.style.transition = '';
+      navLinks.style.height = '';
+      navLinks.style.overflow = '';
+      navLinks.style.willChange = '';
+      navLinks.style.transform = '';
+      navLinks.style.backfaceVisibility = '';
       navLinks.removeEventListener('transitionend', handler);
     });
   }
 });
+
 
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
@@ -143,6 +147,8 @@ window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
 </script>
+
+
 
   <style>
     gallery img {

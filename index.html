@@ -72,64 +72,78 @@
   </div>
 
   <script>
+function openModal(imgElement) {
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  modal.style.display = "flex";
+  modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
+}
 
-    function openModal(imgElement) {
-      const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modal-img");
-      modal.style.display = "flex";
-      modalImg.src = imgElement.src.replace("_kicsi", "_nagy");
-    }
-      
-    function closeModal(event) {
-      if(event) event.stopPropagation();
-      document.getElementById("modal").style.display = "none";
-    }
+function closeModal(event) {
+  if (event) event.stopPropagation();
+  document.getElementById("modal").style.display = "none";
+}
 
-
-
-const hamburger = document.querySelector('.hamburger')
-const navLinks = document.querySelector('.nav-links')
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
   if (navLinks.classList.contains('active')) {
-    navLinks.style.overflow = "hidden"
-    const height = navLinks.scrollHeight
-    navLinks.style.height = height + "px"
+    navLinks.style.overflow = "hidden";
+    const height = navLinks.scrollHeight;
+    navLinks.style.height = height + "px";
+
+    navLinks.style.willChange = "height";
+    navLinks.style.transform = "translateZ(0)";
+
     requestAnimationFrame(() => {
-      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
-      navLinks.style.height = "0px"
-    })
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
+      navLinks.style.height = "0px";
+    });
+
     navLinks.addEventListener('transitionend', function handler() {
-      navLinks.classList.remove('active')
-      navLinks.style.transition = ""
-      navLinks.style.height = ""
-      navLinks.style.overflow = ""
-      navLinks.removeEventListener('transitionend', handler)
-    })
+      navLinks.classList.remove('active');
+      navLinks.style.transition = "";
+      navLinks.style.height = "";
+      navLinks.style.overflow = "";
+      navLinks.style.willChange = "";
+      navLinks.style.transform = "";
+      navLinks.removeEventListener('transitionend', handler);
+    });
   } else {
-    navLinks.classList.add('active')
-    navLinks.style.overflow = "hidden"
-    navLinks.style.height = "0px"
+    navLinks.classList.add('active');
+    navLinks.style.overflow = "hidden";
+    navLinks.style.height = "0px";
+
+    navLinks.style.willChange = "height";
+    navLinks.style.transform = "translateZ(0)";
+
     requestAnimationFrame(() => {
-      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)"
-      navLinks.style.height = navLinks.scrollHeight + "px"
-    })
+      navLinks.style.transition = "height 0.35s cubic-bezier(0.4,0,0.2,1)";
+      navLinks.style.height = navLinks.scrollHeight + "px";
+    });
+
     navLinks.addEventListener('transitionend', function handler() {
-      navLinks.style.transition = ""
-      navLinks.style.height = ""
-      navLinks.style.overflow = ""
-      navLinks.removeEventListener('transitionend', handler)
-    })
+      navLinks.style.transition = "";
+      navLinks.style.height = "";
+      navLinks.style.overflow = "";
+      navLinks.style.willChange = "";
+      navLinks.style.transform = "";
+      navLinks.removeEventListener('transitionend', handler);
+    });
   }
-})
+});
+
 if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
+  history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+window.addEventListener('load', () => {
   window.scrollTo(0, 0);
-  window.addEventListener('load', () => {
-    window.scrollTo(0, 0);
-  });
-  </script>
+});
+</script>
+
   <style>
     gallery img {
           image-rendering: auto;

@@ -52,3 +52,14 @@ window.scrollTo(0, 0);
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
 });
+  
+(function() {
+    if ('fonts' in document) {
+      Promise.all([
+        document.fonts.load("400 1em NewCreation"),
+      ]).then(function() {
+        document.documentElement.classList.add('fonts-ready');
+      });
+    } else {
+    }
+  })();

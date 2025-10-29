@@ -32,20 +32,6 @@ body {
   position: relative;
   background: inherit;
 }
-@font-face {
-  font-family: 'NewCreationRegular';
-  src:
-    url('/fonts/NewCreationRegular.woff2') format('woff2'),
-    url('/fonts/NewCreationRegular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  ascent-override: 100%;
-  descent-override: 20%;
-  line-gap-override: 0%;
-
-}
-
 
 .smoke {
   position: absolute;
@@ -437,9 +423,9 @@ img, picture, video, svg {
 }
 @font-face {
   font-family: 'NewCreation';
-  src: url('fonts/NewCreationRegular.woff2') format('woff2'),
-       url('fonts/NewCreationRegular.woff') format('woff');
-  font-weight: normal;
+  src: url('/fonts/NewCreationRegular.woff2') format('woff2'),
+       url('/fonts/NewCreationRegular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
